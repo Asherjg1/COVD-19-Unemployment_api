@@ -1,0 +1,2 @@
+class CompanyLayoff < ApplicationRecord
+end
