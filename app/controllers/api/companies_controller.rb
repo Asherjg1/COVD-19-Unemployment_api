@@ -3,11 +3,12 @@ class Api::CompaniesController < ApplicationController
     render json:{companies: Company.all}
   end
   def show
-    company=Company.first
+    company=Company.find_by(id: params[:id])
     company_lay_offs = Hash.new {|h,k| h[k] = [] }
 
-      company.company_layoffs.each do |company_lay_off|
-        company_lay_offs[company.name].push(company_lay_off)
+    company.company_layoffs.each do |company_lay_off|
+      data={number_laid_off:company_lay_off.number_laid_off}
+      company_lay_offs[company.name].push(data)
 
 
     end
