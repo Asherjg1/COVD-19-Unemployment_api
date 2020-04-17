@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_12_222158) do
+ActiveRecord::Schema.define(version: 2020_04_17_213722) do
 
   create_table "companies", force: :cascade do |t|
-    t.string "name\u2029"
     t.integer "number_of_employees"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
   end
 
   create_table "company_layoffs", force: :cascade do |t|
