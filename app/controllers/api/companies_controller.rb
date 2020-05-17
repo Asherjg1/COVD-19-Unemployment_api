@@ -6,8 +6,9 @@ class Api::CompaniesController < ApplicationController
 
   def show
     company = Company.find_by(id: params[:id])
+    company_data = {name: company.name, number_of_employeess: company.number_of_employees}
     result = generate_company_layoffs(params[:id])
-    render json: result
+    render json: result.merge(company_data)
   end
 
   def generate_company_layoffs(id = nil)
