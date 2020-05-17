@@ -26,7 +26,7 @@ total_number_of_employees += company.number_of_employees
 	total_number_laid_at_all_companies += total_number_laid_at_company
     end
 
-  {total_num_laid_off: total_number_laid_at_all_companies.round(0), unemployment_rate: (total_number_laid_at_all_companies/total_number_of_employees).round(2)}
+  {total_num_laid_off: total_number_laid_at_all_companies.round(0), unemployment_rate: (total_number_laid_at_all_companies/total_number_of_employees).round(2), number_of_companies_laid_off: Company.last.id}
 
   end
 
