@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
+
+gem 'webdrivers'
 gem 'rack-cors'
 gem 'sidekiq-scheduler'
 gem 'selenium-webdriver', '~> 2.48', '>= 2.48.1'
