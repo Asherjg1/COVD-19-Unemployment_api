@@ -10,5 +10,6 @@ class HelloWorld < ApplicationJob
   @browser.find_element(class: 'viewMenuPopover').click
   sleep 1
   @browser.find_element(class: 'viewMenuButton.pointer')
+  @browser.quit
   end
 end
